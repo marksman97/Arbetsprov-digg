@@ -1,0 +1,11 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: arbetsprov-app
+spec:
+  host: https://arbetsprov.testapp.se/
+  port:
+    targetPort: 8080 
+  to:
+    kind: Service
+    name: arbetsprov-service
