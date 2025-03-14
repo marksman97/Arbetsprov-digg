@@ -2,6 +2,8 @@ apiVersion: v1
 kind: Service
 metadata:
   name: arbetsprov-app
+  labels:
+    app: arbetsprov-app
 spec:
   selector:
     app: arbetsprov-app

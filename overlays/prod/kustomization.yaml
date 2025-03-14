@@ -10,6 +10,8 @@ patches:
       kind: Deployment
       metadata:
         name: arbetsprov-app
+        labels:
+          app: arbetsprov-app
       spec:
         template:
           spec:

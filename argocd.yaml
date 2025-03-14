@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: arbetsprov-app
+  namespace: arbetsprov-gitops
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: main
+  source:
+    repoURL: https://arbetsprov.git.se/arbetsprov-app-config.git
+    targetRevision: main
+    path: overlays/prod
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: digg-arbetsprov-prod
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
