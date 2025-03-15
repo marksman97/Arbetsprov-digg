@@ -1,0 +1,15 @@
+apiVersion: networking.istio.io/v1
+kind: Gateway
+metadata:
+  name: arbetsprov-app
+  namespace: arbetsprov-gitops
+spec:
+  selector:
+    app: arbetsprov-app
+  servers:
+  - port:
+      number: 8080
+      name: http
+      protocol: HTTP
+    hosts:
+    - "https://arbetsprov.testapp.se/"

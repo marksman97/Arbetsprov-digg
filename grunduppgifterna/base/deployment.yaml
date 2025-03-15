@@ -18,7 +18,7 @@ spec:
       - name: arbetsprov-app
         image: arbetsprov.registry.se/arbetsprov-app:0.0.1
         env:
-        - name: LOG_LEVEL
+        - name: LOG_LEVEL #quarkus.log.level 
           value: DEBUG
         resources:
           limits:

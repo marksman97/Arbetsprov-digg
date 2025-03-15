@@ -10,7 +10,7 @@ spec:
   source:
     repoURL: https://arbetsprov.git.se/arbetsprov-app-config.git
     targetRevision: main
-    path: overlays/prod
+    path: apps/arbetsprov-app/overlays/prod
   destination:
     server: https://kubernetes.default.svc
     namespace: digg-arbetsprov-prod

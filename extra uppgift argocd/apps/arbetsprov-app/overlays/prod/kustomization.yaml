@@ -21,3 +21,4 @@ patches:
               env:
               - name: LOG_LEVEL
                 value: INFO
+
